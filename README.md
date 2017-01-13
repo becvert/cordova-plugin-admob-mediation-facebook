@@ -18,9 +18,11 @@ Keep using the API of your favorite Admob cordova plugin!
 
 ## Changelog ##
 
+#### Version 1.1.0:
+- Facebook Adapter 4.17.0.0
+
 #### Version 1.0.0: 
-- FAN Android SDK 4.+ 
-- FAN iOS SDK 4.15.1
+- Facebook Adapter 4.15.1
 
 ## Licence ##
 
