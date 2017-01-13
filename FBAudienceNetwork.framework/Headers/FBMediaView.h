@@ -54,11 +54,16 @@ FB_CLASS_EXPORT
  */
 @property (nonatomic, strong, nonnull) FBNativeAd *nativeAd;
 
+@property (nonatomic, assign, readonly) float volume;
+
 /*!
  @property
  @abstract Enables or disables autoplay for some types of media. Defaults to YES.
  */
 @property (nonatomic, assign, getter=isAutoplayEnabled) BOOL autoplayEnabled;
+
+// Setting autoplayEnabled in the SDK is deprecated. Migrate to using server-side control when available.
+- (void)setAutoplayEnabled:(BOOL)autoplayEnabled FB_DEPRECATED;
 
 @end
 
@@ -81,6 +86,67 @@ FB_CLASS_EXPORT
  @param mediaView An FBMediaView object sending the message.
  */
 - (void)mediaViewDidLoad:(FBMediaView *)mediaView;
+
+/*!
+ @method
+
+ @abstract
+ Sent just before an FBMediaView will enter the fullscreen layout.
+
+ @param mediaView An FBMediaView object sending the message.
+ */
+- (void)mediaViewWillEnterFullscreen:(FBMediaView *)mediaView;
+
+/*!
+ @method
+
+ @abstract
+ Sent after an FBMediaView has exited the fullscreen layout.
+
+ @param mediaView An FBMediaView object sending the message.
+ */
+- (void)mediaViewDidExitFullscreen:(FBMediaView *)mediaView;
+
+/*!
+ @method
+
+ @abstract
+ Sent when an FBMediaView has changed the playback volume of a video ad.
+
+ @param mediaView An FBMediaView object sending the message.
+ @param volume The current ad video volume (after the volume change).
+ */
+- (void)mediaView:(FBMediaView *)mediaView videoVolumeDidChange:(float)volume;
+
+/*!
+ @method
+
+ @abstract
+ Sent after a video ad in an FBMediaView enters a paused state.
+
+ @param mediaView An FBMediaView object sending the message.
+ */
+- (void)mediaViewVideoDidPause:(FBMediaView *)mediaView;
+
+/*!
+ @method
+
+ @abstract
+ Sent after a video ad in an FBMediaView enters a playing state.
+
+ @param mediaView An FBMediaView object sending the message.
+ */
+- (void)mediaViewVideoDidPlay:(FBMediaView *)mediaView;
+
+/*!
+ @method
+
+ @abstract
+ Sent when a video ad in an FBMediaView reaches the end of playback.
+
+ @param mediaView An FBMediaView object sending the message.
+ */
+- (void)mediaViewVideoDidComplete:(FBMediaView *)mediaView;
 
 @end
 
