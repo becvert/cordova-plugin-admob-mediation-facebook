@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	id="cordova-plugin-admob-mediation-facebook"
-	version="1.1.0">
-      
-    <name>AdMob Mediation Adapter for Facebook Audience Network</name>
-	<description>AdMob Mediation Adapter for Facebook Audience Network</description>
-	<author>Sylvain Brejeon</author>
-	<keywords>admob,mediation,facebook</keywords>
-	<license>MIT</license>
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-admob-mediation-facebook"
+    version="1.1.0">
 
-	<engines>
-	    <engine name="cordova" version=">=3.0" />
-	</engines>
+    <name>AdMob Mediation Adapter for Facebook Audience Network</name>
+    <description>AdMob Mediation Adapter for Facebook Audience Network</description>
+    <author>Sylvain Bréjeon</author>
+    <keywords>admob,mediation,facebook</keywords>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
 
     <platform name="android">
-		<config-file target="AndroidManifest.xml" parent="/manifest">
+        <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET"/>
-			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
         </config-file>
-		<config-file target="AndroidManifest.xml" parent="/manifest/application">
-			<activity android:name="com.facebook.ads.InterstitialAdActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.facebook.ads.InterstitialAdActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
         </config-file>
-	    <source-file src="FacebookAdapter.jar" target-dir="libs" />
-		<framework src="com.facebook.android:audience-network-sdk:4.+" />
+        <source-file src="FacebookAdapter.jar" target-dir="libs" />
+        <framework src="com.facebook.android:audience-network-sdk:4.+" />
     </platform>
 
-    <platform name="ios">    
+    <platform name="ios">
         <framework src="FacebookAdapter.framework" custom="true" />
-		<framework src="FBAudienceNetwork.framework" custom="true" />
-		<framework src="AdSupport.framework"/>
-		<framework src="StoreKit.framework"/>
+        <framework src="FBAudienceNetwork.framework" custom="true" />
+        <framework src="AdSupport.framework"/>
+        <framework src="StoreKit.framework"/>
         <framework src="CoreMotion.framework"/>
     </platform>
 
