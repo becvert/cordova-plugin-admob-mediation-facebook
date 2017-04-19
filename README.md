@@ -18,6 +18,11 @@ Keep using the API of your favorite Admob cordova plugin!
 
 ## Changelog ##
 
+#### Version 1.2.0:
+- [Android] Removing jar. Use maven instead
+- [iOS] Removing frameworks. Use pods instead
+- Facebook Adapter 4.20.0.0
+
 #### Version 1.1.0:
 - Facebook Adapter 4.17.0.0
 
