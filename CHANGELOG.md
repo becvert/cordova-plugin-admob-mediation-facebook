@@ -1,3 +1,6 @@
+## [1.2.3]
+- Facebook Adapter 4.24.0.0
+
 ## [1.2.2]
 - Facebook Adapter 4.23.0.0
 
