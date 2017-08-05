@@ -1,3 +1,6 @@
+## [1.2.4] - 2017-08-05 
+- Facebook Adapter 4.25.0.0
+
 ## [1.2.3]
 - Facebook Adapter 4.24.0.0
 
