@@ -3,7 +3,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-admob-mediation-facebook"
-    version="1.2.6">
+    version="1.2.7">
 
     <name>AdMob Mediation Adapter for Facebook Audience Network</name>
     <description>AdMob Mediation Adapter for Facebook Audience Network</description>
@@ -12,16 +12,16 @@
     <license>MIT</license>
 
     <platform name="android">
-        <framework src="com.facebook.android:audience-network-sdk:4.28.1" />
-        <framework src="com.google.ads.mediation:facebook:4.28.1.0" />
+        <framework src="com.facebook.android:audience-network-sdk:5.2.0" />
+        <framework src="com.google.ads.mediation:facebook:5.2.0.1" />
     </platform>
 
     <platform name="ios">
         <pods-config ios-min-version="9.0" use-frameworks="true" />
-        <pod name="FBAudienceNetwork" version="4.28.1" />
-        <pod name="GoogleMobileAdsMediationFacebook" version="4.28.1.1" />
+        <pod name="FBAudienceNetwork" version="5.2.0" />
+        <pod name="GoogleMobileAdsMediationFacebook" version="5.2.0.1" />
     </platform>
     
-    <dependency id="cordova-plugin-cocoapod-support" version="1.3.0" />
+    <dependency id="cordova-plugin-cocoapod-support" version="1.6.0" />
 
 </plugin>
